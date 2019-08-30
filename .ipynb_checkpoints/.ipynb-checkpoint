@@ -1,0 +1,64 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "OBJECT\n",
+    "This database is to provide a tool for a particular challenge run in the videogame \"Pokemon Emerald\" where the ROM has been altered to disable experience gain. In this run, caught Pokemon will be stuck with the moves they are first caught with. This database has tables for all in-game locations and includes the available Pokemon at that location, their maximum possible level at encounter, and their four move slots in respect to their level. \n",
+    "\n",
+    "This data exists online, but would involve searching the move tables of every individual creature as it came up on the current in game location. It is also a practice project for creating databases from disparate data sources and for advanced web scraping.\n",
+    "\n",
+    "GETTING THE LEARNSET DATA\n",
+    "1. scrape the names, in lowercase, of the Pokemon in Hoenn Pokedex.\n",
+    "   https://pokemondb.net/pokedex/game/ruby-sapphire-emerald\n",
+    "   list: names\n",
+    "2. loop the pages https://pokemondb.net/pokedex/lotad/moves/3\n",
+    "   with a variable iterating over names in place of lotad.\n",
+    "3. For each name in names...\n",
+    "   Scrape the 'Moves learnt by level up' table ('Lv.' and 'Move') from page.\n",
+    "   Create a table 'name' containing 'Name', 'Level' and 'Move'.\n",
+    "   \n",
+    "GETTING THE LOCATION DATA\n",
+    "1. scrape the locations in lowercase with no spaces.\n",
+    "   https://pokemondb.net/location#tab-hoenn\n",
+    "   list: locations\n",
+    "2. loop the pages https://www.serebii.net/pokearth/hoenn/3rd/route102.shtml    with a variable 'loc' in place of route102.\n",
+    "3. For each loc in locations...\n",
+    "   Scrape the 'Pokemon Emerald' container (Pokemon name, 'Max Level') in the    'Standard Walking' container\n",
+    "   create a table 'location' containing 'Name', 'MaxLv', 'Method' (which should be set equal to \"grass\"),\n",
+    "   'Move1', 'Move2', 'Move3', 'Move4'.\n",
+    "   \n",
+    "BRINGING THE LOCATION AND LEARNSET DATA TOGETHER"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
