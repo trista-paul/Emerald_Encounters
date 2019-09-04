@@ -2,9 +2,10 @@
 Emerald_Encounters is a complete wild encounter database for the main story of Pokemon Emerald, and primarily a tool
 for playing no "no exp" hacks. <br>
 <br>
+![WILDS table in DB Browser](https://github.com/trista-paul/Emerald_Encounters/blob/master/2019-09-03%20(4).png)<br>
 The "WILDS" table, shown here in the recommended desktop app "DB Browser for SQLite", lists wild pokemon encounters by location, encounter method (floor+method for multilevel locations), maximum level, and the up to four moves it would come with at that level. In regular gameplay the starting moveset is a trivial detail as it will quickly get replaced by levelling up, but in a no experience challenge these movesets are semi-permanent (only being replaced by rare, consumable TMs or move tutors) and become a critical factor in what you catch. Search for specific locations, pokemon, and encounter methods in DB Browser by typing into the 'Filter' cells.<br> 
 <br>
-The "POKEMON" table is a simple list of all the pokemon represented in main story wild encounters (only 118, with "PKID" ranging from 0-117). The "LEARNSET" table organizes the full learnset of pokemon identified by aforementioned PKID. Both tables mostly exist for programming "WILDS", but I wanted to keep them in the final version if someone wanted to better understand that tables' backbone.<br>
+The "POKEMON" table is a simple list of all the pokemon represented in main story wild encounters (only 118, with "PKID" ranging from 0-117). The "LEARNSET" table organizes the full learnset of pokemon identified by aforementioned PKID. Both tables mostly exist for programming "WILDS", but I wanted to keep them in the final version if someone wanted to better understand the database's backbone.<br>
 <br>
 Data: The data was sourced from Serebii.net's "Pokearth" wild encounter tables and pokemondb.net's gen 3 pokemon learnset pages (example [1](https://www.serebii.net/pokearth/hoenn/3rd/route102.shtml),[2](https://pokemondb.net/pokedex/lotad/moves/3)). The list of main story locations and the Hoenn region pokedex are also sourced from pokemondb.net. <br>
 <br>
