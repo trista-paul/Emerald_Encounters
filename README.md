@@ -1,6 +1,6 @@
 # Emerald_Encounters
 Emerald_Encounters is a complete wild encounter database for the main story of Pokemon Emerald, and primarily a tool
-for playing no "no exp" hacks. <br>
+for playing no "no exp" hacks. Download "Emerald_Encounters_v2" to use the database and, if you want, open the notebook "Development Notebook" to read the python code. <br>
 <br>
 ![WILDS table in DB Browser](https://github.com/trista-paul/Emerald_Encounters/blob/master/2019-09-03%20(4).png)<br>
 The "WILDS" table, shown here in the recommended desktop app "DB Browser for SQLite", lists wild pokemon encounters by location, encounter method (floor+method for multilevel locations), maximum level, and the up to four moves it would come with at that level. In regular gameplay the starting moveset is a trivial detail as it will quickly get replaced by levelling up, but in a no experience challenge these movesets are semi-permanent (only being replaced by rare, consumable TMs or move tutors) and become a critical factor in what you catch. Search for specific locations, pokemon, and encounter methods in DB Browser by typing into the 'Filter' cells.<br> 
@@ -8,5 +8,7 @@ The "WILDS" table, shown here in the recommended desktop app "DB Browser for SQL
 The "POKEMON" table is a simple list of all the pokemon represented in main story wild encounters (only 118, with "PKID" ranging from 0-117). The "LEARNSET" table organizes the full learnset of pokemon identified by aforementioned PKID. Both tables mostly exist for programming "WILDS", but I wanted to keep them in the final version if someone wanted to better understand the database's backbone.<br>
 <br>
 Data: The data was sourced from Serebii.net's "Pokearth" wild encounter tables and pokemondb.net's gen 3 pokemon learnset pages (example [1](https://www.serebii.net/pokearth/hoenn/3rd/route102.shtml),[2](https://pokemondb.net/pokedex/lotad/moves/3)). The list of main story locations and the Hoenn region pokedex are also sourced from pokemondb.net. <br>
+<br>
+![executing SQL on database in DB Browser](https://github.com/trista-paul/Emerald_Encounters/blob/master/2019-09-03%20(6).png)
 <br>
 What is this database providing that its sources don't?: Convenience and powerful new searching options. Serebii.net has the pokemon by location (on individual pages hidden in tabs by default) and the best level you're going to get them at, but not the moves. For each pokemon you could have interest in catching, you would have to search for their learnset on pokemon.db (on another set of individual pages that hide them in tabs by default) and infer. Emerald_Encounters retrieves both the moveset and levels directly and has all locations' data in one table; a search for preloaded location data is instantaneous compared to navigation on individual site pages. Having the data in one SQL compatible table allows for searches like all encounters of a specific pokemon, or the highest level pokemon currently available to you, or the earliest you can find a pokemon with a specific move.
