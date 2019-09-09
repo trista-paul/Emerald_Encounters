@@ -1,6 +1,6 @@
 # Emerald_Encounters
 Emerald_Encounters is a complete wild encounter database for the main story of Pokemon Emerald, and primarily a tool
-for playing no "no exp" hacks. Download "Emerald_Encounters_v2" to use the database and, if you want, open the notebook "Development Notebook" to read the python code. <br>
+for playing no "no exp" hacks. Download "Emerald_Encounters_v2.sqbpro" to use the database and get insight into the python code by opening the notebook "Development Notebook". "Emerald_Encounters" without the filetype is the exact database the code produces, which at a later point needed a manual fix for a handful of errors in the data source. <br>
 <br>
 ![WILDS table in DB Browser](https://github.com/trista-paul/Emerald_Encounters/blob/master/2019-09-03%20(4).png)<br>
 The "WILDS" table, shown here in the recommended desktop app "DB Browser for SQLite", lists wild pokemon encounters by location, encounter method (floor+method for multilevel locations), maximum level, and the up to four moves it would come with at that level. In regular gameplay the starting moveset is a trivial detail as it will quickly get replaced by levelling up, but in a no experience challenge these movesets are semi-permanent (only being replaced by rare, consumable TMs or move tutors) and become a critical factor in what you catch. Search for specific locations, pokemon, and encounter methods in DB Browser by typing into the 'Filter' cells.<br> 
